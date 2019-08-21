@@ -24,5 +24,13 @@ namespace Ex02
         {
             InitializeComponent();
         }
+
+        private void CalcularClick(object sender, RoutedEventArgs e)
+        {
+            Esfera x = new Esfera();
+            x.SetRaio(double.Parse(txtR.Text));
+            txtA.Text = x.CalcArea().ToString("0.00");
+            txtV.Text = x.CalcVolume().ToString("0.00");
+        }
     }
 }

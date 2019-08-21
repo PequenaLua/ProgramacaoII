@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex02"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Esfera" Height="250" Width="300">
     <Grid>
-        
+        <GroupBox Header="Área e Volume">
+            <Grid>
+                <TextBlock Height="20" Width="100" HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Text="Raio" Margin="10,10,0,0" />
+                <TextBlock Height="20" Width="100" HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Text="Área" Margin="10,100,0,0" />
+                <TextBlock Height="20" Width="100" HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Text="Volume" Margin="120,100,0,0" />
+                <TextBox Name="txtR" Height="20" Width="100" HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Text="" Margin="10,30,0,0" />
+                <TextBox Name="txtA" Height="20" Width="100" HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Text="" Margin="10,120,0,0" />
+                <TextBox Name="txtV" Height="20" Width="100" HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Text="" Margin="120,120,0,0" />
+                <Button Height="20" Width="210" Content="Calcular" HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" Margin="10,70,0,0" Click="CalcularClick" />
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>

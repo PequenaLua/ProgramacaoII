@@ -3,10 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Ex04"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="348.571" Width="534.286">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="50,37,0,0" TextWrapping="Wrap" Text="A" VerticalAlignment="Top" Height="32" Width="140"/>
+        <TextBlock HorizontalAlignment="Left" Margin="373,202,0,0" TextWrapping="Wrap" Text="X2" VerticalAlignment="Top" Height="32" Width="140"/>
+        <TextBlock HorizontalAlignment="Left" Margin="215,202,0,0" TextWrapping="Wrap" Text="X1" VerticalAlignment="Top" Height="32" Width="140"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,202,0,0" TextWrapping="Wrap" Text="Delta" VerticalAlignment="Top" Height="32" Width="140"/>
+        <TextBlock HorizontalAlignment="Left" Margin="373,37,0,0" TextWrapping="Wrap" Text="C" VerticalAlignment="Top" Height="32" Width="140"/>
+        <TextBlock HorizontalAlignment="Left" Margin="215,37,0,0" TextWrapping="Wrap" Text="B" VerticalAlignment="Top" Height="32" Width="140"/>
+        <TextBox x:Name="txtA" HorizontalAlignment="Left" Height="23" Margin="50,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtB" HorizontalAlignment="Left" Height="23" Margin="215,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtC" HorizontalAlignment="Left" Height="23" Margin="372,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtX2" HorizontalAlignment="Left" Height="23" Margin="372,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtX1" HorizontalAlignment="Left" Height="23" Margin="215,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDelta" HorizontalAlignment="Left" Height="23" Margin="50,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnArea" Content="Calcular" HorizontalAlignment="Left" Margin="136,143,0,0" VerticalAlignment="Top" Width="247" Height="33" FontSize="20" Click="Button_Click"/>
     </Grid>
 </Window>
