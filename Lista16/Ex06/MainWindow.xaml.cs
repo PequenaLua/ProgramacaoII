@@ -24,5 +24,21 @@ namespace Ex06
         {
             InitializeComponent();
         }
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Bingo b = new Bingo();
+            b.Iniciar(10);
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+            Console.WriteLine(b.Proximo());
+        }
     }
 }
