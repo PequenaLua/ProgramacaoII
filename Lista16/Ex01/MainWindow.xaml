@@ -19,3 +19,5 @@
         <TextBox x:Name="vVelocidade" HorizontalAlignment="Left" Height="28" Margin="87,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205"/>
     </Grid>
 </Window>
+
+   
