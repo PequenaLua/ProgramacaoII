@@ -3,10 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Ex01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="362.687" Width="402.052">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="75,31,0,0" TextWrapping="Wrap" Text="Distancia - Km" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" Margin="243,31,0,0" TextWrapping="Wrap" Text="Tempo - h" VerticalAlignment="Top" Width="133"/>
+        <TextBox x:Name="vDistancia" HorizontalAlignment="Left" Height="17" Margin="76,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="vTempo" HorizontalAlignment="Left" Height="17" Margin="243,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+        <Button x:Name="bCalcular" Content="Calcular" HorizontalAlignment="Left" Height="32" Margin="121,116,0,0" VerticalAlignment="Top" Width="207" Click="BCalcular_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="87,212,0,0" TextWrapping="Wrap" Text="Velocidade - km/h" VerticalAlignment="Top" Width="187"/>
+        <TextBox x:Name="vVelocidade" HorizontalAlignment="Left" Height="28" Margin="87,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205"/>
     </Grid>
 </Window>

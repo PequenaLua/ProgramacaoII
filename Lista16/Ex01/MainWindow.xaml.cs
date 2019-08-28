@@ -24,5 +24,13 @@ namespace Ex01
         {
             InitializeComponent();
         }
+
+        private void BCalcular_Click(object sender, RoutedEventArgs e)
+        {
+            calcular t = new calcular();
+            t.SetDistancia(double.Parse(vDistancia.Text));
+            t.SetTempo(double.Parse(vTempo.Text));
+            vVelocidade.Text = t.CalcVelocidade().ToString();
+        }
     }
 }
