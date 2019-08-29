@@ -20,25 +20,32 @@ namespace Ex06
     /// </summary>
     public partial class MainWindow : Window
     {
+        bingo a;
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Resultado.Text = a.proximo().ToString();
+            string texto = "";
+            foreach (int i in a.Sorteados())
+            {
+                texto = texto + i.ToString() + " - ";
+            }
+            Sorteados.Text = texto;
+        }
+
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Bingo b = new Bingo();
-            b.Iniciar(10);
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
-            Console.WriteLine(b.Proximo());
+            if (txt != null) txt.Text = slider.Value.ToString();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            a = new bingo();
+            a.Iniciar(int.Parse(txt.Text));
         }
     }
 }

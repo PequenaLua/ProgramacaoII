@@ -6,40 +6,37 @@ using System.Threading.Tasks;
 
 namespace Ex06
 {
-    class Bingo
+    class bingo
     {
-        private int numBolas;
-        private int[] v;
-        private int c;
-        public void Iniciar(int numBolas)
+        private int numBolas, cont = 0;
+        public void Iniciar(int a) { numBolas = a; }
+        private bool[] sorteados = new bool[100];
+        private int[] vSort = new int[100];
+        public int proximo()
         {
-            // Número de bolas
-            this.numBolas = numBolas;
-            // Número de bolas inseridas no vetor
+            Random random = new Random();
+            bool passar = false;
             int k = 0;
-            // Vetor com as bolas sorteadas
-            v = new int[numBolas];
-            // Sorteia um número
-            Random r = new Random();
-            while (k < numBolas)
+            while (!passar)
             {
-                int n = r.Next(1, numBolas + 1);
-                // Procura o número no vetor
-                if (Array.IndexOf(v, n) == -1)
+                k = random.Next(1, numBolas + 1);
+                if (!sorteados[k - 1] && cont < numBolas)
                 {
-                    v[k] = n; k++;
+                    sorteados[k - 1] = true;
+                    passar = true;
+                    vSort[cont] = k;
+                    cont++;
                 }
             }
+            if (cont >= numBolas) return -1;
+            return k;
         }
-        public int Proximo()
+        public int[] Sorteados()
         {
-            if (c < numBolas)
-            {
-                int x = v[c];
-                c++;
-                return x;
-            }
-            return -1;
+            int[] retorno = new int[cont];
+            Array.Copy(vSort, retorno, cont);
+            return retorno;
         }
+        public int GetCont() { return cont; }
     }
 }

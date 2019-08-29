@@ -13,8 +13,8 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <GroupBox Header="Número de Bolas" 
                   Margin="4,4,4,0"             
@@ -35,12 +35,12 @@
                          Text="50"
                          IsReadOnly="True"/>
                 <Button Grid.Column="2" 
-                        Content="Iniciar"/>
+                        Content="Iniciar" Click="Button_Click_1"/>
             </Grid>
         </GroupBox>
         <Button Content="Sortear" Grid.Row="1"
-                Margin="4"/>
-        <TextBox Text="35" Grid.Row="1" Grid.Column="1"
+                Margin="4" Click="Button_Click"/>
+        <TextBox x:Name="Resultado" Text="35" Grid.Row="1" Grid.Column="1"
                  FontSize="48" 
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Center"
@@ -49,7 +49,7 @@
                   Margin="4,0,4,4"             
                   Grid.Row="2"
                   Grid.ColumnSpan="2">
-            <TextBlock Text="1 - 3 - 23 - 35" />
+            <TextBlock x:Name="Sorteados" Text="1 - 3 - 23 - 35" />
         </GroupBox>
     </Grid>
 </Window>

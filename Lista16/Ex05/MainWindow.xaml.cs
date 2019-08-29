@@ -19,10 +19,21 @@ namespace Ex05
     /// Interação lógica para MainWindow.xam
     /// </summary>
     public partial class MainWindow : Window
-    {
-        public MainWindow()
         {
-            InitializeComponent();
+            public MainWindow()
+            {
+                InitializeComponent();
+            }
+
+            private void Button_Click(object sender, RoutedEventArgs e)
+            {
+                Numeros a = new Numeros(int.Parse(Inicio.Text), int.Parse(Fim.Text));
+                bool nPares, nImpares;
+                if (Par.IsChecked == true) nPares = true;
+                else nPares = false;
+                if (Impar.IsChecked == true) nImpares = true;
+                else nImpares = false;
+                Lista.ItemsSource = a.Calcular(nPares, nImpares);
+            }
         }
     }
-}
